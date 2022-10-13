@@ -1,5 +1,5 @@
 //geht bis 92 stufen
-
+//https://www.digitalocean.com/community/tutorials/multithreading-in-java
 import java.util.Scanner;
 
 public class main {
