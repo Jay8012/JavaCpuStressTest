@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.jay8012</groupId>
-    <artifactId>CpuStressTest</artifactId>
+    <artifactId>java-cpu-stresstest</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -14,13 +14,15 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
+            <name>release</name>
             <url>https://maven.pkg.github.com/Jay8012/CpuStressTest</url>
         </repository>
     </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
