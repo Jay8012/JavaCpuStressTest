@@ -1,4 +1,4 @@
-package de.exceptions;
+package de.jay8012.exceptions;
 
 public class MussMirNochWasUeberlegenException extends Exception {
     public MussMirNochWasUeberlegenException() {

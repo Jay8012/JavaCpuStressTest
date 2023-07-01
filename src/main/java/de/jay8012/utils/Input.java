@@ -1,6 +1,6 @@
-package de.utils;
+package de.jay8012.utils;
 
-import de.exceptions.MussMirNochWasUeberlegenException;
+import de.jay8012.exceptions.MussMirNochWasUeberlegenException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

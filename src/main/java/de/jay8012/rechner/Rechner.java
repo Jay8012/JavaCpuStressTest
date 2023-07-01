@@ -1,4 +1,4 @@
-package de.rechner;
+package de.jay8012.rechner;
 
 public class Rechner {
      public long fib(long n) {

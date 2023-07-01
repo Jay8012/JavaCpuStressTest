@@ -1,7 +1,7 @@
-package de;
+package de.jay8012;
 
-import de.exceptions.MussMirNochWasUeberlegenException;
-import de.utils.Input;
+import de.jay8012.exceptions.MussMirNochWasUeberlegenException;
+import de.jay8012.utils.Input;
 
 
 public class Main {

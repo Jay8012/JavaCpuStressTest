@@ -1,8 +1,8 @@
-package de;
+package de.jay8012;
 
-import de.exceptions.MussMirNochWasUeberlegenException;
-import de.rechner.Rechner;
-import de.utils.Input;
+import de.jay8012.exceptions.MussMirNochWasUeberlegenException;
+import de.jay8012.rechner.Rechner;
+import de.jay8012.utils.Input;
 
 import java.io.IOException;
 import java.util.ArrayList;
