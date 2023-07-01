@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.InputMismatchException;
 
+
+@SuppressWarnings("squid:S00112")
 public class Input {
     private static int counter = 5;
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
