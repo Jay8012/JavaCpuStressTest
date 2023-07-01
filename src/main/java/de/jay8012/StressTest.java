@@ -18,30 +18,31 @@ public class StressTest {
         }
 
         boolean start = true;
-
+        long stufen = 5000;
         while (start) {
-            startThread(cores);
-            start = input();
+            try {
+                startThread(cores, stufen);
+                start = input();
+            } catch (StackOverflowError ignore) {
+                stufen = stufen / 2;
+            }
         }
     }
 
-    private void startThread(int cores) {
-        final long stufen = 500;
+    private void startThread(int cores, long stufen) {
+        final long fStufen = stufen;
         final List<Thread> threads = new ArrayList<>(cores);
-        try {
-            for (int i = 0; i < cores; i++) {
-                final Thread thread = new Thread(() -> {
-                    Rechner rechner = new Rechner();
-                    rechner.fib(stufen);
-                });
-                thread.start();
-                threads.add(thread);
-            }
-            waitForThreads(threads);
-        } catch (StackOverflowError ignore) {
-            //ignore
+        for (int i = 0; i < cores; i++) {
+            final Thread thread = new Thread(() -> {
+                Rechner rechner = new Rechner();
+                rechner.fib(fStufen);
+            });
+            thread.start();
+            threads.add(thread);
         }
+        waitForThreads(threads);
     }
+
 
     public void waitForThreads(List<Thread> threadList) {
         threadList.forEach(thread -> {
