@@ -63,22 +63,19 @@ public class Input {
         throw new MussMirNochWasUeberlegenException();
     }
 
-    public static int readInputAndReturnAsInt() throws MussMirNochWasUeberlegenException, IOException {
-        while (counterForTrys()) {
-            String input = br.readLine().trim();
+    public static int readInputAndReturnAsInt() throws IOException {
+        String input = br.readLine().trim();
 
-            try {
-                int inputAsInt = Integer.parseInt(input);
-                counter = 3;
-                return inputAsInt;
-            } catch (NumberFormatException | InputMismatchException e) {
-                input = input.toUpperCase();
-                char inputAsChar = input.charAt(0);
-                counter = 3;
-                return (inputAsChar - 65);
-            }
+        try {
+            int inputAsInt = Integer.parseInt(input);
+            counter = 3;
+            return inputAsInt;
+        } catch (NumberFormatException | InputMismatchException e) {
+            input = input.toUpperCase();
+            char inputAsChar = input.charAt(0);
+            counter = 3;
+            return (inputAsChar - 65);
         }
-        throw new MussMirNochWasUeberlegenException();
     }
 
     private static boolean counterForTrys() {
