@@ -6,7 +6,10 @@ CpuStressTest is a lightweight Java Stresstest. The stress test is based on the 
 ## Usage
 It uses Java 17.
 You can specify how many threads you can use. In the question it is also said again how many you have
-
+If double click doesn´t work use:
+```bash
+java -jar CpuStressTest-1.0.jar
+```
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
